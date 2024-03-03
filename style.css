@@ -1,90 +1,127 @@
-body {
-  font-family: arial, sans-serif; /* Choose a modern and web-safe font */
-  margin: 0;
-  padding: 20px;
-  background-color: #c1f6f9; /* Introduce a subtle background color */
-}
-
-.container {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 30px; /* Increase padding for better spacing */
-  border: none; /* Remove border for a cleaner look */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
-  border-radius: 5px;
-}
-
-h1 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #333; /* Use a darker color for better contrast */
-  font-size: 24px; /* Increase font size for emphasis */
-}
-
-.form-group {
-  margin-bottom: 15px;
-  display: flex; /* Use flexbox for horizontal layout */
-  justify-content: space-between; /* Align elements evenly */
-}
-
-.form-group:nth-child(even) { /* Style even-numbered rows differently */
-  background-color: #eee; /* Add a light background color to alternate rows */
-}
-
-label {
-  display: inline-block; /* Display label inline with input for better alignment */
-  margin-bottom: 5px;
-  width: 40%; /* Allocate space for labels */
-  text-align: center; /* Right-align labels for better readability */
-  color: #333; /* Use same color as headings */
-}
-
-input,
-select {
-  width: 55%; /* Allocate space for input fields */
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-
-.error-message {
-  color: red;
-  font-size: 0.8rem;
-  display: none;
-}
-
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out; /* Add smooth button transition */
-}
-
-button:hover {
-  background-color: #3e8e41;
-}
-
-@media only screen and (max-width: 768px) {
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'DejaVu Sans Mono', Courier, monospace;
+    box-sizing: border-box;
+  }
+  
+  /* Container for the entire to-do list */
   .container {
-    width: 90%;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(237, 46, 195); /* Dark background color */
+    padding: 10px;
   }
-
-  .form-group {
-    flex-direction: column; /* Switch to vertical layout on smaller screens */
-    align-items: center; /* Center elements vertically */
-    justify-content: center;
+  
+  /* Main to-do list section */
+  .list {
+    background-color: rgb(2, 0, 35);
+    width: 100%;
+    max-width: 540px;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
   }
-
-  label {
-    text-align: center; /* Left-align labels on smaller screens */
-    width: 100%; /* Take full width on smaller screens */
+  
+  /* Title of the to-do list */
+  .list h1 {
+    color: rgb(255, 255, 255); /* White text */
+    font-size: 50px;
+    /* Adjust position based on your layout preference */
+    position: relative;
+    top: 50px;
+    left: 30px;
+    cursor: pointer;
   }
-
-  input,
-  select {
-    width: 100%; /* Take full width on smaller screens */
+  
+  /* Hover effect for the title */
+  .list h1:hover {
+    color: rgb(0, 183, 255); /* Light blue hover color */
   }
-}
+  
+  /* Search bar for adding new tasks */
+  .search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff; /* White background */
+    margin: 0px;
+    border-radius: 11px;
+    border-color: rgb(2, 0, 70); /* Dark border color */
+    /* Adjust margin based on your spacing preference */
+    margin-top: 40px;
+  }
+  
+  /* Input field for adding tasks */
+  input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    margin-left: 5px;
+    font-size: 16px;
+  }
+  
+  /* Add task button */
+  button {
+    border: none;
+    outline: none;
+    padding: 15px 20px;
+    background: rgb(192, 190, 249); /* Dark blue button color */
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+  /* Hover effect for the button */
+  button:hover {
+    background: rgb(0, 183, 255); /* Light blue hover color */
+    color: rgb(203, 202, 234); /* Dark text on hover */
+  }
+  
+  /* Remove unused navigation bar styles (if not implemented) */
+  /* .bar {
+    width: 100%;
+    height: 20%;
+    padding: 10px;
+    text-decoration: none;
+  }
+  
+  .bar li {
+    color: #fff;
+    list-style: none;
+    display: inline;
+    justify-content: space-between;
+    padding: 30px 20px;
+    cursor: pointer;
+  }
+  
+  .bar a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .bar a:hover {
+    color: rgb(0, 183, 255);
+  } */
+  
+  /* List of tasks */
+  .list ul {
+    /* Adjust margin based on your spacing preference */
+    margin: 30px auto;
+    text-align: center;
+  }
+  
+  /* Individual task items */
+  .list ul li {
+    list-style: none;
+    font-size: 20px;
+    color: #fff; /* White text */
+    padding: 12px 30px 12px 30px; /* Adjust padding for better checkbox placement */
+    margin: 10px auto;
+    background: rgb(104, 246, 227); /* Dark background */
+    border-radius: 10px;
+  
