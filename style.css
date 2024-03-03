@@ -1,0 +1,90 @@
+body {
+  font-family: arial, sans-serif; /* Choose a modern and web-safe font */
+  margin: 0;
+  padding: 20px;
+  background-color: #c1f6f9; /* Introduce a subtle background color */
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px; /* Increase padding for better spacing */
+  border: none; /* Remove border for a cleaner look */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+  border-radius: 5px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333; /* Use a darker color for better contrast */
+  font-size: 24px; /* Increase font size for emphasis */
+}
+
+.form-group {
+  margin-bottom: 15px;
+  display: flex; /* Use flexbox for horizontal layout */
+  justify-content: space-between; /* Align elements evenly */
+}
+
+.form-group:nth-child(even) { /* Style even-numbered rows differently */
+  background-color: #eee; /* Add a light background color to alternate rows */
+}
+
+label {
+  display: inline-block; /* Display label inline with input for better alignment */
+  margin-bottom: 5px;
+  width: 40%; /* Allocate space for labels */
+  text-align: center; /* Right-align labels for better readability */
+  color: #333; /* Use same color as headings */
+}
+
+input,
+select {
+  width: 55%; /* Allocate space for input fields */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.8rem;
+  display: none;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; /* Add smooth button transition */
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  .form-group {
+    flex-direction: column; /* Switch to vertical layout on smaller screens */
+    align-items: center; /* Center elements vertically */
+    justify-content: center;
+  }
+
+  label {
+    text-align: center; /* Left-align labels on smaller screens */
+    width: 100%; /* Take full width on smaller screens */
+  }
+
+  input,
+  select {
+    width: 100%; /* Take full width on smaller screens */
+  }
+}
